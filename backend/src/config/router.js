@@ -2,10 +2,10 @@
 // const uploadConfig = require('./uploads');
 
 // const BannerController = require('../controllers/BannerController');
-const ProductController = require('../controllers/ProductController');
-function createRoutes() {
+const createProductRoutes = require('../routes/product');
+function createRouter() {
     async function start(server) {
-        const ProductRoutes = await ProductController();
+        const ProductRoutes = await createProductRoutes();
         const productRoutes = await ProductRoutes.start();
         server.use('/product', productRoutes)
 
@@ -22,4 +22,4 @@ function createRoutes() {
     }
 }
 
-module.exports = createRoutes;
+module.exports = createRouter;

@@ -1,12 +1,12 @@
 // const createDatabaseConnection = require('./database');
 const createServer = require('./server');
-const createRoutes = require('./routes');
+const createRouter = require('./router');
 
 function createCore(configurations = {}) {
-    const Routes = configurations.routes || createRoutes();
+    const Routes = configurations.routes || createRouter();
     const Server = configurations.server || createServer();
 
-    async function start() {
+    function start() {
         console.log('> [core] Starting...');
 
         const server = Server.start();
@@ -15,6 +15,9 @@ function createCore(configurations = {}) {
             server.listen(3333, () => {
                 console.log('> [core] Starting done! System running!');
             });
+        }).catch(error => {
+            console.log('[core] Error:');
+            console.log(error);
         });
     }
 

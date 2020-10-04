@@ -1,31 +1,32 @@
 const express = require('express');
 const ProductController = require('../controllers/ProductController');
 
-async function createProductRoutes (configurations = {}) {
+function createProductRoutes (configurations = {}) {
     const routes = express.Router();
-    const ProductRoutes = await ProductController();
 
-    routes.get('/', (req, res) => {
-        return ProductRoutes.index(req, res);
-    });
+    async function start() {
+        const ProductRoutes = await ProductController();
 
-    routes.get('/:id_product', (req, res)  => {
-        return ProductRoutes.show(req, res);
-    });
+        routes.get('/', (req, res) => {
+            return ProductRoutes.index(req, res);
+        });
 
-    routes.post('/', (req, res) => {
-        return ProductRoutes.store(req, res);
-    });
+        routes.get('/:id_product', (req, res)  => {
+            return ProductRoutes.show(req, res);
+        });
 
-    routes.patch('/:id_product', (req, res) => {
-        return ProductRoutes.update(req, res);
-    });
+        routes.post('/', (req, res) => {
+            return ProductRoutes.store(req, res);
+        });
 
-    routes.delete('/:id_product', (req, res) => {
-        return ProductRoutes.destroy(req, res);
-    });
+        routes.patch('/:id_product', (req, res) => {
+            return ProductRoutes.update(req, res);
+        });
 
-    function start() {
+        routes.delete('/:id_product', (req, res) => {
+            return ProductRoutes.destroy(req, res);
+        });
+
         return routes;
     }
 

@@ -1,13 +1,16 @@
-// const multer = require('multer');
-// const uploadConfig = require('./uploads');
-
-// const BannerController = require('../controllers/BannerController');
+const createBannerRoutes = require('../routes/banner');
 const createProductRoutes = require('../routes/product');
+
 function createRouter() {
+    const ProductRoutes = createProductRoutes();
+    const BannerRoutes = createBannerRoutes();
+
     async function start(server) {
-        const ProductRoutes = await createProductRoutes();
         const productRoutes = await ProductRoutes.start();
-        server.use('/product', productRoutes)
+        const bannerRoutes = await BannerRoutes.start();
+
+        server.use('/product', productRoutes);
+        server.use('/banner', bannerRoutes);
 
         return server;
     }

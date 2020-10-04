@@ -2,13 +2,13 @@ const createProductModel = require('../models/ProductModel');
 
 async function createProductController (configurations = {}) {
     const ProductModel = createProductModel();
-    const Product = await ProductModel.start()
+    const Product = await ProductModel.start();
 
     function index(req, res) {
         Product.findAll().then(response => {
             return res.send({
                 status: 1,
-                mensagem: 'Buscar todos os produtos',
+                message: 'Buscar todos os produtos',
                 products: response.map(product => {
                     return {
                         id: product.id,
@@ -32,21 +32,21 @@ async function createProductController (configurations = {}) {
     function show(req, res) {
         const { id_product } = req.params;
 
-        Product.findByPk(id_product).then(produto => {
+        Product.findByPk(id_product).then(response => {
             let product = {};
 
-            if (produto !== null) {
+            if (response !== null) {
                 product = {
-                    id: produto.id,
-                    status : produto.status,
-                    title : produto.title,
-                    description: produto.description,
-                    code: produto.code
+                    id: response.id,
+                    status : response.status,
+                    title : response.title,
+                    description: response.description,
+                    code: response.code
                 }
             }
             return res.send({
                 status: 1,
-                mensagem: 'Buscar um produto',
+                message: 'Buscar um produto',
                 product: product
             });
         }).catch(error => {
@@ -65,7 +65,7 @@ async function createProductController (configurations = {}) {
         }).then(response => {
             return res.status(201).send({
                 status: 1,
-                mensagem: 'Produto cadastrado com sucesso',
+                message: 'Produto cadastrado com sucesso',
                 product: {
                     id: response.id,
                     status : response.status,

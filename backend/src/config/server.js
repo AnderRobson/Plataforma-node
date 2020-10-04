@@ -6,7 +6,7 @@ function createServer() {
     function start() {
         console.log('> [server] Starting...');
         const server = new express()
-        server.use(cors({origin: 'http://localhost:3333'}))
+        server.use(cors({origin: 'http://localhost:3001'}))
         server.use(express.json());
         server.use('/files', express.static(path.resolve(__dirname, '..', '..', 'uploads')));
         console.log('> [server] Starting done!');

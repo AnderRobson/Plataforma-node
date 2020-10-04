@@ -31,21 +31,8 @@
       <change afterPath="$PROJECT_DIR$/backend/src/models/BannerModel.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/backend/src/routes/banner.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/backend/uploads/banner/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/uploads/banner/20150718_181030-1601836980295.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/uploads/banner/20200609132651e7df14ae1aea300c03c4cf97cef49aba.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/uploads/banner/20200609132943site indisponivel.PNG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/uploads/banner/20200820043343.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/uploads/banner/20200820043343.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/uploads/banner/samurai-art-fighting-forest-4-4k-1601838006758.jpg" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/backend/uploads/product/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/uploads/product/20200821021420.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/uploads/product/20200821021646.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/uploads/product/20200830224923.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/uploads/product/semimage.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/backend/uploads/publication/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/uploads/publication/20200821040158.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/uploads/publication/20200821042607.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/uploads/publication/20200821044301.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/config/router.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/config/router.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/config/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/config/server.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/controllers/ProductController.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/controllers/ProductController.js" afterDir="false" />
@@ -74,6 +61,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_MARK_IGNORED_FILES_AS_EXCLUDED" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="12.18.4" />
@@ -116,7 +104,7 @@
       <updated>1601769430071</updated>
       <workItem from="1601769436162" duration="156000" />
       <workItem from="1601769728729" duration="12176000" />
-      <workItem from="1601830538200" duration="15339000" />
+      <workItem from="1601830538200" duration="15667000" />
     </task>
     <servers />
   </component>
